@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <!-- me figuring out html5 validation features -->
+    <!-- <form>
+        <input type="email" required> <br>
+        <input type="text" required> <br>
+        <input type="submit" value="Submit Now!">
+        <input type="number" min="10" required>
+    </form> -->
+    <!-- <div id="overlay"></div> -->
+    <h1 id="title">MCU Survey Form</h1>
+    <p id="description">A short survey of all MCU movies released upto December 2018</p>
+    <form id="survey-form" action="#" method="POST">
+        <div>
+            <label  for="name" id="name-label" class="question">Name
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </label>
+        </div>
+        <div>
+            <label  for="email" id="email-label" class="question">Email
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </label>
+        </div>
+        <div>
+            <label  for="age" id="number-label" class="question">Age <small>(optional)</small>
+                <input type="number" id="number" name="age" placeholder="Age" min="10" max="100">
+            </label>
+        </div>
+        <div>
+            <label  for="team" id="team-label" class="question">Which team did you support in Civil War?
+                <select name="team" id="dropdown" required>
+                    <option disabled selected value="NULL">Select a team</option>
+                    <option value="TEAM-C">Team Captain America</option>
+                    <option value="TEAM-I">Team Iron Man</option>
+                </select>
+            </label>
+        </div>
+        <div>
+           <label for="duration" class="question">How recently did you start watching MCU?
+                <label><input type="radio" name="duration" value="recent" checked>Last few months</label> <!-- required here too? -->
+                <label><input type="radio" name="duration" value="years">Several years</label>
+                <label><input type="radio" name="duration" value="start">Since the first movie</label>
+                <label><input type="radio" name="duration" value="comic">Know marvel since the comics</label>
+            </label>
+        </div>
+        <div>
+            <label for="fav-character" class="question">What are your favourite characters? <small>(choose all that you like)</small>
+                 <label><input type="checkbox" name="fav-character" value="thor">Thor Odinson</label>
+                 <label><input type="checkbox" name="fav-character" value="natasha">Natasha Romanov</label>
+                 <label><input type="checkbox" name="fav-character" value="steve">Steve Rogers</label>
+                 <label><input type="checkbox" name="fav-character" value="clint">Clint Barton</label>
+                 <label><input type="checkbox" name="fav-character" value="bruce">Bruce Banner</label>
+                 <label><input type="checkbox" name="fav-character" value="tony">Tony Stark</label>
+                 <label><input type="checkbox" name="fav-character" value="sam">Sam Wilson</label>
+                 <label><input type="checkbox" name="fav-character" value="bucky">Bucky Barnes</label>
+                 <label><input type="checkbox" name="fav-character" value="wanda">Wanda Maximoff</label>
+                 <label><input type="checkbox" name="fav-character" value="vision">Vision</label>
+                 <label><input type="checkbox" name="fav-character" value="scott">Scott Lang</label>
+                 <label><input type="checkbox" name="fav-character" value="peter">Peter Parker</label>
+                 <label><input type="checkbox" name="fav-character" value="t'challa">T'Challa</label>
+            </label>
+         </div>
+         <div>
+             <label for="comments" class="question">Anything else you want to tell us?</label>
+                 <textarea id="comments" placeholder="Enter your comments here..."></textarea>
+         </div>
+         <input id="submit" type="submit" name="submit" value="Submit Here!">
+    </form>
+</body>
+</html>

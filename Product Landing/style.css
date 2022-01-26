@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
 
-/*
-what is left:
--> footer styling
--> add media queries to make it responsive at different sizes (iframe and footer left)
-*/
-
 :root {
   --gray: #eeeeee;
   --yellow: #ffbb00;

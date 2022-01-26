@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+
+/*
+what is left:
+-> footer styling
+-> add media queries to make it responsive at different sizes (iframe and footer left)
+*/
+
+:root {
+  --gray: #eeeeee;
+  --yellow: #ffbb00;
+  --dark: #272727;
+  --shade: #707070;
+  --light: #bbbbbb;
+  --orange: #ff9900;
+  --pagefont: 'Roboto';
+}
+
+body {
+  background: var(--gray, lightgray);
+  font-family: var(--pagefont, sans-serif);
+  background-size: cover;
+  margin: 0;
+  position: relative;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark, black);
+}
+
+header {
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; */
+  /* justify-content: center; */
+  /* justify-content: space-between; */
+  align-items: center;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  height: 59px;
+  background: var(--gray, lightgray);
+  /* background-color: red; */
+  
+}
+
+a[class="nav-link"] > div {
+  padding: 20px 40px;
+  height: inherit;
+  float: right;
+  transition: all 200ms ease-in;
+}
+
+a[class="nav-link"] > div:hover {
+  background: var(--shade, gray);
+  color: white;
+}
+
+#header-img {
+  height: 40px;
+  float: left; 
+  margin: 15px 10px;
+}
+
+main > h1 {
+  padding: 50px 10vw 0;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type=email] {
+  padding: 7px;
+  width: 75vw;
+  max-width: 300px;
+  min-width: 200px;
+}
+
+input[type="submit"], button {
+  background: var(--yellow, yellow);
+  /* background: none; */
+	color: inherit;
+	border: none;
+	padding: 5px 10px;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  margin: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background 100ms ease-in;
+}
+
+input[type="submit"]:hover, button:hover {
+  background: var(--orange, orange);
+}
+
+/* #features {
+
+} */
+
+#features > div {
+  margin: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 60vw;
+  min-width: 100px;
+}
+
+.icon {
+  height: 75px;
+  width: 75px;
+  /* float: left; */
+  margin: 10px 30px;
+}
+
+.icon-txt > h1 {
+  margin-bottom: 5px;
+}
+
+.icon-txt > p {
+  margin-top: 5px;
+}
+
+iframe {
+  width:560px;
+  height:315px;
+}
+
+#pricing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.pro {
+  /* padding: 20px; */
+  margin: 20px;
+  border-radius: 3px;
+  width: 275px;
+  border: 1px solid var(--dark, black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  text-align: center;
+  transition: all 100ms ease-in;
+}
+
+.pro:hover {
+  box-shadow: 5px 3px 0 0 var(--shade, gray);
+}
+
+.pro > div {
+  width: 100%;
+}
+
+.price {
+  font-size: 1.5em;
+  margin: 20px 0 10px 0;
+}
+
+.pro > p {
+  margin: 5px;
+}
+
+.product-name {
+  padding: 15px 0;
+  background: var(--light, gray);
+}
+
+footer {
+  background: var(--light, gray);
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+li {
+  color: var(--dark, gray);
+  margin: 0 10px;
+  font-size: 0.9em;  
+}
+
+span {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 10px 5px;
+  color: var(--shade, gray);
+  font-size: 0.75em;
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  a[class="nav-link"] > div {
+    float: none;
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  header {
+    height: 170px;
+    /* background: red; */
+  }
+
+  #header-img {
+    float: none;
+    height: 30px;
+    margin: 10px auto;
+    /* margin: 10px 0; */
+  }
+
+  .icon {
+    display: none;
+  }
+
+  iframe {
+    width: 300px;
+    height: 178px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .pro {
+    width: 70%;
+    min-width: 200px;
+  }
+
+  footer {
+    width: 90%;
+  }
+}
+
+
+
